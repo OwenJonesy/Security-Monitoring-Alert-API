@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security_alerts
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+redis:
+  host: ${REDIS_HOST:localhost}
+  port: ${REDIS_PORT:6379}
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:changeme}
+    expiration: 3600
+
+
